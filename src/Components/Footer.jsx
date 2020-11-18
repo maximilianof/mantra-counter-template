@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <a href="https://www.diamondway.org/" target="_new">
-        DWBC
+        DWB
       </a>{' '}
       •{' '}
       <a href="https://www.diamondway.org/nrc/" target="_new">

@@ -21,7 +21,6 @@ function App() {
         let sortedData = []
         const response = await fetch(process.env.REACT_APP_AWS_DYNAMODB_URI)
         const resJson = await response.json()
-        console.log(resJson)
         if (resJson.length) {
           mantrasAmount = resJson.reduce((a, b) => ({
             mantras_count: a.mantras_count + b.mantras_count
@@ -74,6 +73,7 @@ function App() {
       mantras_count:
         allMantras.mantras_count + parseInt(inputData.mantras_count)
     })
+    console.log(inputData)
     fetch(process.env.REACT_APP_AWS_DYNAMODB_URI, {
       method: 'POST',
       body: JSON.stringify(inputData),
