@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from './Components/Header.jsx'
 import MantrasAmount from './Components/MantrasAmount.jsx'
 import MantrasForm from './Components/MantrasForm.jsx'
-import MantrasHistory from './Components/MantrasHistory.jsx'
+// import MantrasHistory from './Components/MantrasHistory.jsx'
 import './styles/App.css'
 import MantrasIntro from './Components/MantrasIntro.jsx'
 import Footer from './Components/Footer.jsx'
@@ -17,14 +17,19 @@ function App() {
   useEffect(() => {
     async function loadData() {
       try {
+        let mantrasAmount = { mantras_count: 0 }
+        let sortedData = []
         const response = await fetch(process.env.REACT_APP_AWS_DYNAMODB_URI)
         const resJson = await response.json()
-        const mantrasAmount = resJson.reduce((a, b) => ({
-          mantras_count: a.mantras_count + b.mantras_count
-        }))
-        const sortedData = resJson.sort(function(a, b) {
-          return new Date(b.date_created) - new Date(a.date_created)
-        })
+        console.log(resJson)
+        if (resJson.length) {
+          mantrasAmount = resJson.reduce((a, b) => ({
+            mantras_count: a.mantras_count + b.mantras_count
+          }))
+          sortedData = resJson.sort(function (a, b) {
+            return new Date(b.date_created) - new Date(a.date_created)
+          })
+        }
         setData(sortedData)
         setAllMantras(mantrasAmount)
       } catch (err) {
@@ -81,10 +86,13 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+    >
       <Header />
       <MantrasIntro />
-      {data && allMantras.mantras_count ? (
+      {data && allMantras.mantras_count >= 0 ? (
         <>
           <MantrasAmount allMantras={allMantras} />
           <MantrasForm
@@ -92,7 +100,7 @@ function App() {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
-          <MantrasHistory data={data} />
+          {/* <MantrasHistory data={data} /> */}
           <Footer />
         </>
       ) : (
