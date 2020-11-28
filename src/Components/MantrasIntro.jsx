@@ -28,7 +28,7 @@ const MantrasIntro = () => {
         2021 and see how soon we can accomplish{' '}
         <b>11,111,111 Karmapa Chennos</b>. Primarily we wish to build up
         Karmapa's power-field and establish the finest conditions for the
-        realization of the first Diamond Way stupa in the North America.
+        realization of the first Diamond Way stupa in North America.
       </p>
     </div>
   )
