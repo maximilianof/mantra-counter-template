@@ -122,7 +122,6 @@ function App() {
 
   const { width, height } = useWindowSize()
 
-  console.log(showConfetti)
   return (
     <div
       className="App"
