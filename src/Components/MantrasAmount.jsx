@@ -1,8 +1,9 @@
 import React from 'react'
 import '../styles/MantrasAmount.css'
 import AnimatedNumber from 'animated-number-react'
+import PropTypes from 'prop-types'
 
-export default function MantrasAmount(props) {
+function MantrasAmount(props) {
   const { allMantras } = props
 
   const numberWithCommas = x => {
@@ -25,3 +26,8 @@ export default function MantrasAmount(props) {
     </div>
   )
 }
+
+MantrasAmount.propTypes = {
+  allMantras: PropTypes.object.isRequired
+}
+export default MantrasAmount

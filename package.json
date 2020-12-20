@@ -4,10 +4,13 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
-    "animated-number-react": "0.0.2"
+    "animated-number-react": "0.0.2",
+    "eslint": "^7.15.0",
+    "react": "^17.0.0",
+    "react-confetti": "^6.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "^4.0.0",
+    "react-use": "^15.3.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,9 +18,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && mv ./build/index.html ./build/200.html && surge --project ./build --domain https://mp-counter.surge.sh"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -32,7 +32,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.20.6"
+    "eslint-plugin-react": "^7.21.5"
   }
 }

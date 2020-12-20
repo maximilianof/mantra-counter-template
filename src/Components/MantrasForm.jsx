@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/MantrasForm.css'
 
-export default function MantrasForm(props) {
+function MantrasForm(props) {
   const { inputData, handleSubmit, handleChange } = props
   return (
     <div className="mantras-form-container">
@@ -28,3 +29,11 @@ export default function MantrasForm(props) {
     </div>
   )
 }
+
+MantrasForm.propTypes = {
+  inputData: PropTypes.object.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
+}
+
+export default MantrasForm

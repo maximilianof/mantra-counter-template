@@ -17,7 +17,7 @@ const MantrasIntro = () => {
       <p className="intro_text">
         Whether you do a formal Guru Yoga session or are doing mantras while
         walking in the park...if you are dedicating them to{' '}
-        <a href="http://www.diamondway.org/nrc/" target="_new">
+        <a href="https://www.diamondway.org/nrc/" target="_new">
           the Stupa of Complete Victory at NRC
         </a>
         , make that wish and simply count them and make a record of it. Then
@@ -27,7 +27,7 @@ const MantrasIntro = () => {
         recommended as well. We wish to keep this project ongoing throughout
         2021 and see how soon we can accomplish{' '}
         <b>11,111,111 Karmapa Chennos</b>. Primarily we wish to build up
-        Karmapa's power-field and establish the finest conditions for the
+        Karmapa&apos;s power-field and establish the finest conditions for the
         realization of the first Diamond Way stupa in North America.
       </p>
     </div>
