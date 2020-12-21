@@ -14,6 +14,7 @@ function MantrasForm(props) {
             placeholder="Number"
             value={inputData.mantras_count}
             onChange={handleChange}
+            label="mantra input"
           />
           {/* <input
             type="text"
