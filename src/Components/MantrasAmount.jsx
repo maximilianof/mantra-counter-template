@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/MantrasAmount.css'
 import AnimatedNumber from 'animated-number-react'
 import PropTypes from 'prop-types'
+import '../styles/MantrasAmount.css'
 
 function MantrasAmount(props) {
   const { allMantras } = props
@@ -15,7 +15,6 @@ function MantrasAmount(props) {
   return (
     <div className="mantras_count_container">
       <p className="mantras_count">
-        {/* {numberWithCommas(allMantras.mantras_count)} */}
         <AnimatedNumber
           value={allMantras.mantras_count}
           formatValue={formatValue}

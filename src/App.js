@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import useWindowSize from 'react-use/lib/useWindowSize'
-import Confetti from 'react-confetti'
 import Header from './Components/Header.jsx'
 import MantrasAmount from './Components/MantrasAmount.jsx'
 import MantrasForm from './Components/MantrasForm.jsx'
-// import MantrasHistory from './Components/MantrasHistory.jsx'
 import './styles/App.css'
 import MantrasIntro from './Components/MantrasIntro.jsx'
 import Footer from './Components/Footer.jsx'
@@ -13,7 +10,6 @@ import Loader from './Components/Loader.jsx'
 function App() {
   const [data, setData] = useState([])
   const [allMantras, setAllMantras] = useState({})
-  const [showConfetti, setShowConfetti] = useState(false)
   const [inputData, setinputData] = useState({ name: '', mantras_count: '' })
   const [mode, setMode] = useState()
 
@@ -88,40 +84,6 @@ function App() {
     setinputData({ name: '', mantras_count: '' })
   }
 
-  useEffect(() => {
-    if (
-      (allMantras.mantras_count >= 1000000 &&
-        allMantras.mantras_count <= 1001000) ||
-      (allMantras.mantras_count >= 2000000 &&
-        allMantras.mantras_count <= 2001000) ||
-      (allMantras.mantras_count >= 3000000 &&
-        allMantras.mantras_count <= 3001000) ||
-      (allMantras.mantras_count >= 4000000 &&
-        allMantras.mantras_count <= 4001000) ||
-      (allMantras.mantras_count >= 5000000 &&
-        allMantras.mantras_count <= 5001000) ||
-      (allMantras.mantras_count >= 6000000 &&
-        allMantras.mantras_count <= 6001000) ||
-      (allMantras.mantras_count >= 7000000 &&
-        allMantras.mantras_count <= 7001000) ||
-      (allMantras.mantras_count >= 8000000 &&
-        allMantras.mantras_count <= 8001000) ||
-      (allMantras.mantras_count >= 9000000 &&
-        allMantras.mantras_count <= 9001000) ||
-      (allMantras.mantras_count >= 10000000 &&
-        allMantras.mantras_count <= 10001000) ||
-      (allMantras.mantras_count >= 11000000 &&
-        allMantras.mantras_count <= 11005000)
-    ) {
-      setShowConfetti(true)
-    }
-    return () => {
-      setShowConfetti(false)
-    }
-  }, [allMantras.mantras_count])
-
-  const { width, height } = useWindowSize()
-
   return (
     <div
       className="App"
@@ -131,20 +93,12 @@ function App() {
       <MantrasIntro />
       {data && allMantras.mantras_count >= 0 ? (
         <>
-          <Confetti
-            width={width}
-            height={height}
-            recycle={false}
-            run={showConfetti}
-            numberOfPieces={1500}
-          />
           <MantrasAmount allMantras={allMantras} />
           <MantrasForm
             inputData={inputData}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
           />
-          {/* <MantrasHistory data={data} /> */}
           <Footer />
         </>
       ) : (

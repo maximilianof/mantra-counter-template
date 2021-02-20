@@ -8,8 +8,8 @@ export default function Footer() {
         DWB
       </a>{' '}
       •{' '}
-      <a href="https://www.diamondway.org/nrc/" target="_new">
-        The Northeast Retreat Center
+      <a href="https://www.diamondway.org/your-center" target="_new">
+        --Your local center--
       </a>{' '}
       • 2020
     </div>

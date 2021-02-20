@@ -16,14 +16,6 @@ function MantrasForm(props) {
             onChange={handleChange}
             label="mantra input"
           />
-          {/* <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            maxLength="16"
-            value={inputData.name}
-            onChange={handleChange}
-          /> */}
           <button type="submit">+</button>
         </div>
       </form>
