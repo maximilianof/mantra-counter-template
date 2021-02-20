@@ -1,8 +1,8 @@
-##Mantra Counter template
+# Mantra Counter template
 This repo contains a template for Diamond Way mantras counter website.
 The project also contains PWA(Progressive Web App) setup.
 
-#To start:
+### To start:
 
 - Clone the repo and give it an appropriate name.
 - For local development:
