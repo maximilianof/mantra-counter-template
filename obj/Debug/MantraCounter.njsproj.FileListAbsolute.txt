@@ -1,0 +1,3 @@
+D:\Github\Raskovan\mantra-counter-template\obj\Debug\MantraCounter.njsprojAssemblyReference.cache
+D:\Github\Raskovan\mantra-counter-template\obj\Debug\MantraCounter.njsproj.CoreCompileInputs.cache
+D:\Github\Raskovan\mantra-counter-template\bin\Microsoft.NodejsTools.WebRole.dll
